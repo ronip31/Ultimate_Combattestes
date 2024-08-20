@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Combat</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="ico/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="ico/favicon-16x16.png">
+    <link rel="manifest" href="ico/site.webmanifest">
+
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="mostraInfoJogador()">
+    <header class="cabecalho">
+        <div class="cabecalho-conteudo">
+            <div class="logo">
+                <img src="img/logo01.png" alt="">
+            </div>
+
+            <div class="data">
+                <span class="dias"><i class="far fa-calendar-alt"></i> Dia: 1</span> <span class="horas"><i
+                        class="far fa-clock"></i> 00 : 00</span>
+            </div>
+        </div>
+    </header>
+    
+    <main class="conteudo">
+        <aside class="lado-esquerdo">
+
+            <nav>
+                <ul>
+                    <li><a href="/lutar">Lutar NPC</a></li>
+                    <li><a href="/mochila">Suas Armas</a></li>                    
+                    <li><a href="/mercado">Mercado de Armas</a></li>
+                    <li><a href="/ranking">Rankings</a></li>
+                    <li><a onclick="logout()">Sair</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <section class="centro">
+            <section class="armas">
+                <div class="armas-jogador">
+                    <div class="centro-titulo">
+                        <h1>Compra e venda suas armas</h1>
+                    </div>
+                    <h5 id="mochila">Suas Armas</h5>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Armas</th>
+                                <th>Força</th>
+                                <th>Preço</th>
+                                <th style="text-align: right;">Preço de venda -30%</th>
+                                <th style="text-align: right; padding-right: 20px;">Vender</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabela-armas">
+                            <!-- Aqui será preenchido dinamicamente pelo JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>   
+            <section class="armas">
+                <div class="mercado-armas" id="mercado-a">
+                    <h5>Comprar Armas</h5>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Armas</th>
+                                <th>Força</th>
+                                <th>Preço</th>
+                                <th style="text-align: right; padding-right: 20px;">Comprar</th>
+                            </tr>
+                        </thead>
+                        <tbody class="mercado" id="tabela-mercado">
+                            <!-- Aqui será preenchido dinamicamente pelo JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <hr>
+        </section>
+
+        <section class="lado-direito">
+
+            <div class="nome-jogador">
+                <div id="nome">Nome do jogador</div>
+                <div>Respeito: <span id="respeito">1</span></div>
+            </div>
+
+            <div class="jogador-estamina">
+                <div>Estamina: <span id="estamina">100%</span></div>
+                <div class="barra-estamina">
+                    <div></div>
+                </div>
+            </div>
+
+            <div class="jogador-status">
+                <div class="stats">
+                    <div>inteligencia</div>
+                    <span class="stats-n" id="inteligencia">58</span>
+                </div>
+
+               <div class="stats">
+                    <div>forca</div>
+                    <span class="stats-n" id="forca">58</span>
+                </div>
+
+                <div class="stats">
+                    <div>Carisma</div>
+                    <span class="stats-n" id="carisma">58</span>
+                </div>
+
+                <div class="stats">
+                    <div>Resistência</div>
+                    <div class="stats-n" id="resistencia">58</div>
+                </div>
+
+                <div class="grana">
+                    <div>Grana</div>
+                    <div class="stats-n" id="grana">$58</div>
+                </div>
+            </div>
+
+            <div class="jogador-power">
+                <div>
+                    <div>Power de luta solo</div>
+                    <div class="stats-n"  id="power">58</div>
+                </div>
+            </div>
+
+            <div class="equipamento">
+                <h5>Equipamento</h5>
+                <div id="nomeEquipado">Vazio</div>
+            </div>
+        </section>
+    </main>
+    <script src="scriptmercado.js"></script>
+ </div>  
+</body>
+</html>
